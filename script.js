@@ -96,7 +96,7 @@ const createIcon = (c) => {
 const onClickItem = (e) => {
   e.target.parentElement.classList.contains('remove-item')
     ? rmItem(e.target.parentElement.parentElement)
-    : setItemToEdit(e.target);
+    : e.target.id !== 'item-list' && setItemToEdit(e.target);
 };
 
 const checkIfItemExist = (item) => {
